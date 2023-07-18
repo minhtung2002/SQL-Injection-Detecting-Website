@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Images</title>
+    <style>
+      #im1 {
+        margin-right: 10px;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+      }
+      .content_1 {
+        padding: 10px;
+        margin-right: 30px;
+      }
+      #im2 {
+        overflow: auto;
+        float: left;
+        margin-right: 10px;
+      }
+      .content_2 {
+        padding: 10px;
+      }
+      li {
+        margin-left: 645px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Trực quan hóa dữ liệu</h1>
+    <h3>Tương quan giữa nhãn Âm tính và Dương tính</h3>
+    <div class="container">
+      <img
+        id="im1"
+        src="data:image/png;base64,{{ image1_base64 }}"
+        alt="Image 1"
+      />
+      <div class="content_1">
+        <div>
+          <p>
+            Bộ dữ liệu về SQL Injection đã được gán nhãn (gồm 2 nhãn 0 và 1, với
+            0 là negative và 1 là positive).
+          </p>
+          <p>
+            Dữ liệu gồm 30919 dòng. Dữ liệu gồm 19537 nhãn 0 và 11382 nhãn 1.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Ma trận nhầm lẫn đánh giá độ chính xác của thuật toán SVM</h3>
+    <div>
+      <img
+        id="im2"
+        src="data:image/png;base64,{{ image2_base64 }}"
+        alt="Image 2"
+      />
+      <div class="content_2">
+		  <br>
+        <p style="font-weight:600">Thuật toán sử dụng SVM</p>
+        <p>Thuật toán cho độ chính xác:</p>
+        <ul>
+          <li>Accuracy: 0.992238</li>
+          <li>Precision: 0.993435</li>
+          <li>Recall: 0.989910</li>
+          <li>F1 score: 0.991626</li>
+        </ul>
+        <p>
+          Ma trận nhầm lẫn của thuật toán SVM cho ta thấy 5 nhãn 0 dự đoán là
+          nhãn 1 và 43 nhãn 1 dự đoán là 0
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
